@@ -1,0 +1,20 @@
+# docker-compose version, should set the latest version from https://docs.docker.com/compose/compose-file/compose-versioning/
+version: "3.7"
+
+# all services list here
+services:
+  app:
+    image: docker-node:v1
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+# Port: computer port:continer port
+
+# Step:
+# Start container: `docker-compose up`
+# Stop container: `docker-compose down`
+
+# See detail container
+# `docker-compose exec app sh`
+# See current platform
+# `cat /etc/os-release`
